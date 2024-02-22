@@ -1,7 +1,7 @@
 <?php
 $servername = 'localhost';
 $username = 'root';
-$password = 'root';
+$password = '';
 $dbname = 'jefis';
 $port = 3306;
 
@@ -17,4 +17,6 @@ try{
 catch(PDOException $e){
     echo "Erreur : " . $e->getMessage();
 }
+echo "<h1>(.)(.)</h1>"
+
 ?>
