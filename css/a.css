@@ -5,7 +5,19 @@
 h1{
     font-family: Rubik;
     color:white;
+    text-align: center;
 }
 html{
     background-color: #222222;
+}
+label{
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
