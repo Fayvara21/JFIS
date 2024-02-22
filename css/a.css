@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Rubik;
+    src:url(../font/RubikGlitch-Regular.ttf);
+}
+h1{
+    font-family: Rubik;
+    color:white;
+}
+body{
+    background-color: #222222;
+}
