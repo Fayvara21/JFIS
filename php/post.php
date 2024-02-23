@@ -13,14 +13,31 @@
 </head>
 <body>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+
+  <ul class="right hide-on-med-and-down">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse" ><i class="mdi-navigation-menu"></i></a>
+
+
+
+
   <div class="chatbox superblack">
     <div> 
         <form class="chat_input">
-          <a class="btn-floating grey"><i class="material-icons">add</i></a>
+          <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
           <input class="message" type="text" placeholder="Envoyer un message">
         </form>
     </div>
   </div>
-  
+  <script src="../js/post.js"></script>
+
 </body>
 </html>
