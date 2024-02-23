@@ -35,3 +35,6 @@ try {
       $conn = null
      
 ?>
+<html>
+<meta http-equiv="refresh" content="0;URL=connexion_message.html">
+</html>
