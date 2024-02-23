@@ -18,13 +18,9 @@
         <form class="chat_input">
           <a class="btn-floating grey"><i class="material-icons">add</i></a>
           <input class="message" type="text" placeholder="Envoyer un message">
-          
         </form>
-            
-          
-        
- 
     </div>
   </div>
+  
 </body>
 </html>
