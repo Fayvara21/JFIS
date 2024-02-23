@@ -1,8 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <?php
 $servername = 'localhost';
 $username = 'root';
-$password = 'root';
-$dbname = 'social_network';
+$password = '';
+$dbname = 'jefis';
 $port = 3306;
 
 //On essaie de se connecter
@@ -18,3 +26,5 @@ catch(PDOException $e){
     echo "Erreur : " . $e->getMessage();
 }
 ?>
+</body>
+</html>
