@@ -5,7 +5,78 @@
 h1{
     font-family: Rubik;
     color:white;
+    text-align: center;
+    border: 2px solid #ccc;
 }
 html{
     background-color: #222222;
+}
+label{
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: white;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+#registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #222222;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+button:hover {
+    background-color: black;
+}
+
+#connection {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+#separation{
+        background-size: cover; 
+        background-repeat: no-repeat;     
+}
+
+p{
+    color: white;
+    text-decoration: underline;
+
+      
 }
