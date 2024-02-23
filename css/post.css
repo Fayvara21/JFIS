@@ -1,0 +1,34 @@
+.chatbox{
+    
+    margin: 0;
+    padding: 0;
+    
+    padding-left:5%;
+    padding-right:5%;
+
+    border: solid;
+
+    border-color: white;
+}
+.superblack{
+    background-color: #222222 ;
+}
+
+.chat_input{
+    
+    display: flex;
+    width: auto;
+    
+    align-content: center;
+    justify-content: center;
+}
+.message{
+    color: #9e9e9e;
+    border-radius: 5px;
+    background-color: #eceff1;
+    
+}
+.btn-floating{
+    width: 40px;
+    margin-right: 10px;
+}
