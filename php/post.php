@@ -15,8 +15,10 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
+  <script src="../js/post.js"></script>
+  <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeydown=scroll_from_bottom; </script>
 
-
+  
   <header>
     <ul id="slide-out" class="sidenav sidenav-fixed" >
       
@@ -29,26 +31,84 @@
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
 
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
-  </header>
+    <nav>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
+    </nav>
+  </header> 
 
   <main>
 
-    <p class="chat">
+    <p id="chat" class="chat">
+      <script>
+        function update_chat() {
+          $.ajax ({
+            url: 'update_post_min.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+              $('#chat').empty();
+              $('#chat').append('<p>');
+              $.each(data, function(index, item){
+                $('#chat').append(item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'<br>');
+                scroll_from_bottom();
+              });
+              $('#chat').append('</p>');
+            },
+            error:function(xhr, status, error){
+              console.error('erreur: ', error);
+            }
+          });
+        }
+        update_chat();
+        setInterval(update_chat, 3000);
 
+      </script>
       <?php include "update_post.php" ?>
     </p>
 
     <div class="chatbox superblack">
       <div> 
           
-          <form class="chat_input" method="post" action="">
+          <form id="chat_input" class="chat_input">
+
+            <script>
+              document.getElementById("chat_input").addEventListener("submit", function(event){
+                event.preventDefault();
+                
+                var form_data = new FormData(document.getElementById("chat_input"));
+                if(document.getElementById("message").value != ""){
+                  fetch('update_post.php', 
+                  {
+                    method: 'POST',
+                    body: form_data
+                  }).then(response => response.text())
+                  .catch(error => {console.error('error submit_form')})
+                  document.getElementById("message").value = "";
+                  update_chat();
+                }
+              });
+
+            </script>
+
             <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
-            <input class="message" type="text" name="text_input" placeholder="Envoyer un message">
+            <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
+            <p id="counter">255 </p>
+            
+            <script>
+              function count_letters(){
+                let textlen = document.getElementById('message').value.length;
+                document.getElementById('counter').innerText = 255 - textlen;
+                
+              }
+
+            </script>
+
+
           </form>
+          
       </div>
     </div>
-    <script src="../js/post.js"></script>
+    
 
   </main>
 

@@ -1,15 +1,6 @@
 
 main{
     padding-left: 300px;
-    
-}
-
-
-
-@media only screen and (max-width : 992px) {
-    main {
-    padding-left: 0;
-    }
 }
 
 @font-face {
@@ -19,6 +10,11 @@ main{
 
 .chat{
     color:white;
+    padding-bottom: 48px ;
+    padding-top: 48px;
+    width: auto;
+    word-break: break-all;
+    margin: 20px;
 }
 
 .chatbox{
@@ -26,7 +22,20 @@ main{
     padding:5px;
     border: solid;
     border-color: #FF00FF;
+    position: fixed;
+    bottom: 0%;
+    z-index: 100;
+    width:100vw;
+    padding-right: 300px;
 }
+nav{
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    width:100%; 
+    background-color:#FF00FF;
+}
+
 .superblack, html, .sidenav{
     background-color: #222222 ;
 }
@@ -43,7 +52,8 @@ li > .subheader{
     display: flex;
     width: auto;
     align-content: center;
-    justify-content: center;
+    justify-content: left;
+    height:48px;
 }
 .message{
     color: #9e9e9e;
@@ -55,4 +65,11 @@ li > .subheader{
     flex:none;
     margin-right: 10px;
 }
-
+@media only screen and (max-width : 992px) {
+    main {
+    padding-left: 0;
+    }
+    .chatbox{
+        padding-right: 0px ;
+    }
+}

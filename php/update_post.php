@@ -3,41 +3,47 @@
     $username = "root";
     $password = "";
     $database = "jefis";  
-    
+    $port = 3306;
+
     try {
-        $conn = new PDO("sqlsrv:Server=$servername;Database=$database", $username, $password);
+        $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        //echo"connection réussie <br>";
 
     } catch (PDOException $e) { 
-        echo "connection échouée". $e->getMessage();
+        //echo "connection échouée ". $e->getMessage();
     }
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $message = $_POST["text_input"];
+        try {
+            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-25 10:16:38.000000', '2', '6'); ";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':message', $message);
+            $stmt->execute();
+            header("Location:post.php");
+        } 
+        catch (PDOException $e) { //echo"". $e->getMessage();
+        }
+    }
 
-
-
-
-    //REQUEST 
-    // $conn = new mysqli($servername, $username, $password, $database);
-
-    // if ($conn->connect_error) {
-    //   die("connection échouée". $conn->connect_error);
-    // }
-    // $sql = "SELECT * FROM messages";
-    // $result = $conn->query($sql);
     
-    // if($result->num_rows > 0) {
-    //     echo "<p>";
-    //   while($row = $result->fetch_assoc()) {
-    //     echo"id:".$row["id_users"]." id:".$row["id_users_recieve"]." message:".$row["content"]."<br>";
-    //   }
-    //   echo "</p>";
-    // } 
-    // else {
-    //   echo "aucun résultats";
+
+    // try {
+
+    //     $sql = $conn->prepare("SELECT * FROM messages");
+    //     $sql->execute();
+    //     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+        
+    //     foreach ($result as $row) {
+    //     echo"". $row["id_users"] ." to ". $row["id_users_recieve"]." said :". $row["content"] ."". $row[""]."<br>";
+    //     }
+
+    // } catch (PDOException $e) {
+    //     //echo "aucun message". $e->getMessage();
     // }
-    //REQUEST
-    
+
 
 
 
