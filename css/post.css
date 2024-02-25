@@ -1,24 +1,44 @@
 
-header, main, footer {
+main{
     padding-left: 300px;
+    
 }
 
+
+
 @media only screen and (max-width : 992px) {
-    header, main, footer {
+    main {
     padding-left: 0;
     }
 }
 
+@font-face {
+    font-family: Rubik;
+    src:url(../font/RubikGlitch-Regular.ttf);
+}
+
+.chat{
+    color:white;
+}
 
 .chatbox{
     
     padding:5px;
     border: solid;
-    border-color: white;
+    border-color: #FF00FF;
 }
-.superblack{
+.superblack, html, .sidenav{
     background-color: #222222 ;
 }
+.sidenav li > a, p {
+    color:white; 
+}
+li > .subheader{
+    color:white !important; 
+    font-family: Rubik;
+    font-size: xx-large !important;
+}
+
 .chat_input{   
     display: flex;
     width: auto;
