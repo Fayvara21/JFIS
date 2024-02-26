@@ -21,7 +21,7 @@ main{
     
     padding:5px;
     border: solid;
-    border-color: #FF00FF;
+    border-color: orange;
     position: fixed;
     bottom: 0%;
     z-index: 100;
@@ -33,7 +33,7 @@ nav{
     top: 0%;
     z-index: 100;
     width:100%; 
-    background-color:#FF00FF;
+    background-color:orange;
 }
 
 .superblack, html, .sidenav{
@@ -46,7 +46,7 @@ nav{
 }
 .sidenav{
     border:solid;
-    border-color: #FF00FF;  
+    border-color: orange;  
 }
 li > .subheader{
     color:white !important; 
