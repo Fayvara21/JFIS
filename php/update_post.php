@@ -1,7 +1,21 @@
 <?php 
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "jefis";  
+$port = 3306;
 
-    //if ($_SERVER["REQUEST_METHOD"] == "POST") {
+try {
+    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    //echo"connection réussie <br>";
+
+} catch (PDOException $e) { 
+    //echo "connection échouée ". $e->getMessage();
+}
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $content = $_POST["content"];
         try {
             $sql = "INSERT INTO `posts` (`id`, `content`, `created_at`, `id_users`) VALUES (NULL, :content, '2024-02-26 10:57:43.000000', '7'); ";
@@ -13,10 +27,10 @@
         } 
         catch (PDOException $e) { echo"error". $e->getMessage();
         }
-    //}
-    //else{
+    }
+    // else{
     //    echo"no";
-    //}
+    // }
 
     
 
