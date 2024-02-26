@@ -16,7 +16,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
   <script src="../js/post.js"></script>
-  <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeydown=scroll_from_bottom; </script>
+  <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeyup=scroll_from_bottom; </script>
 
   
   <header>
@@ -50,7 +50,7 @@
               $('#chat').append('<p>');
               $.each(data, function(index, item){
                 $('#chat').append(item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'<br>');
-                scroll_from_bottom();
+                
               });
               $('#chat').append('</p>');
             },

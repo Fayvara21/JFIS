@@ -25,7 +25,7 @@ main{
     position: fixed;
     bottom: 0%;
     z-index: 100;
-    width:100vw;
+    width:98vw;
     padding-right: 300px;
 }
 nav{
@@ -38,9 +38,15 @@ nav{
 
 .superblack, html, .sidenav{
     background-color: #222222 ;
+    
 }
 .sidenav li > a, p {
     color:white; 
+    
+}
+.sidenav{
+    border:solid;
+    border-color: #FF00FF;  
 }
 li > .subheader{
     color:white !important; 
