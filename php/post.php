@@ -11,8 +11,8 @@
     <input id="submit" type="submit" value="Envoyer">
     <script>
         document.getElementById("submit").addEventListener("submit", function(){
-        
-        
+
+
         var form_data = new FormData(document.getElementById("content"));
         if(document.getElementById("content").value != ""){
             fetch('update_post.php', 
