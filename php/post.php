@@ -21,14 +21,20 @@
   
   <header>
     <ul id="slide-out" class="sidenav sidenav-fixed" >
-      
-      <li><a class="subheader">JFIS</a></li>
-      <li><a class="waves-effect" href="#!">Page d'acceuil</a></li>
-      <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-      <li><a class="waves-effect" href="#!">Envoyer un message privé</a></li>
-      <li><div class="divider"></div></li>
+      <div>
+
+        <li><a class="subheader">JFIS</a></li>
+        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
+        <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
+        <li><a class="waves-effect" href="#!">Message privé</a></li>
+      </div>
+
+      <div>
+
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
+
+      </div>
 
     </ul>
     <nav>
@@ -90,7 +96,6 @@
 
             </script>
 
-            <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
             <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
             <p id="counter">255 </p>
             
