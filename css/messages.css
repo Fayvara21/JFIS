@@ -16,7 +16,10 @@ main{
     word-break: break-all;
     margin: 20px;
 }
-
+p{
+    margin: 1px;
+    font-size: medium;
+}
 .chatbox{
     
     padding:5px;
