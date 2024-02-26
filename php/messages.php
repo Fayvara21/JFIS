@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/messages.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
@@ -15,26 +15,20 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
-  <script src="../js/post.js"></script>
+  <script src="../js/messages.js"></script>
   <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeyup=scroll_from_bottom; </script>
 
   
   <header>
     <ul id="slide-out" class="sidenav sidenav-fixed" >
-      <div>
-
-        <li><a class="subheader">JFIS</a></li>
-        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
-        <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-        <li><a class="waves-effect" href="#!">Message privé</a></li>
-      </div>
-
-      <div>
-
+      
+      <li><a class="subheader">JFIS</a></li>
+      <li><a class="waves-effect" href="#!">Page d'acceuil</a></li>
+      <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
+      <li><a class="waves-effect" href="#!">Envoyer un message privé</a></li>
+      <li><div class="divider"></div></li>
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
-
-      </div>
 
     </ul>
     <nav>
@@ -44,21 +38,21 @@
 
   <main>
 
-    <p id="chat" class="chat">
+    <div id="chat" class="chat">
       <script>
         function update_chat() {
           $.ajax ({
-            url: 'update_post_min.php',
+            url: 'update_messages_min.php',
             method: 'GET',
             dataType: 'json',
             success: function(data) {
               $('#chat').empty();
-              $('#chat').append('<p>');
+              
               $.each(data, function(index, item){
-                $('#chat').append(item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'<br>');
+                $('#chat').append('<p>'+item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
                 
               });
-              $('#chat').append('</p>');
+              
             },
             error:function(xhr, status, error){
               console.error('erreur: ', error);
@@ -69,8 +63,8 @@
         setInterval(update_chat, 3000);
 
       </script>
-      <?php include "update_post.php" ?>
-    </p>
+      <?php include "update_messages.php" ?>
+      </div>
 
     <div class="chatbox superblack">
       <div> 
@@ -83,7 +77,7 @@
                 
                 var form_data = new FormData(document.getElementById("chat_input"));
                 if(document.getElementById("message").value != ""){
-                  fetch('update_post.php', 
+                  fetch('update_messages.php', 
                   {
                     method: 'POST',
                     body: form_data
@@ -96,6 +90,7 @@
 
             </script>
 
+            <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
             <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
             <p id="counter">255 </p>
             

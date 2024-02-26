@@ -22,7 +22,7 @@
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':message', $message);
             $stmt->execute();
-            header("Location:post.php");
+            header("Location:messages.php");
         } 
         catch (PDOException $e) { //echo"". $e->getMessage();
         }
