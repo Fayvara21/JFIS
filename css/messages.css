@@ -109,3 +109,7 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
+main{
+    margin-top: 365px;
+    padding-left: 310px;
+}
