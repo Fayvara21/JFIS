@@ -15,10 +15,7 @@ main {
     word-break: break-all;
     margin: 20px;
 }
-p{
-    margin: 1px;
-    font-size: medium;
-}
+
 .chatbox{
 
     padding:5px;
@@ -110,7 +107,7 @@ ul {
     justify-content: space-between;
 }
 main{
-    margin-top: 810px;
-    padding-left: 310px;  
+    margin-top: 365px;
+    padding-left: 160px;  
     padding-right: 10px;
 }

@@ -48,9 +48,9 @@ html,
     background-color: #222;
 }
 
-.sidenav li>a,
+.sidenav li a,
 p {
-    color: white;
+    color: white; 
 }
 
 .sidenav {
@@ -108,4 +108,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+li>div{
+    display: flex;
+    flex-direction: column;
 }

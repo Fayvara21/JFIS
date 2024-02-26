@@ -22,14 +22,22 @@
 
   
   <header>
-    <ul id="slide-out" class="sidenav sidenav-fixed" >
-      
-      <li><a class="subheader">JFIS</a></li>
-      <li><a class="waves-effect" href="#!">Page d'acceuil</a></li>
-      <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-      <li><a class="waves-effect" href="#!">Envoyer un message privé</a></li>
+  <ul id="slide-out" class="sidenav sidenav-fixed" >
+      <div>
+
+        <li><a class="subheader">JFIS</a></li>
+        <li><a class="devider"></a></li>
+        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
+        <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
+        <li><a class="waves-effect" href="#!">Message privé</a></li>
+      </div>
+
+      <div>
+
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
+
+      </div>
 
     </ul>
     <nav>

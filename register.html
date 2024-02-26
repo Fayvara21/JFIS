@@ -30,8 +30,11 @@
             <label for="anniversaire">Date d'anniversaire :</label>
             <input type="date" id="anniversaire" name="anniversaire" required>
 
-            <label for="telephone">Numéro de téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" placeholder="1234567890" required>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" class="validate">
+              <label for="icon_telephone"></label>
+            </div>
 
             <button class="ombres_multiples_diffuses" type="submit">S'inscrire</button>
             <p>ou</p>
