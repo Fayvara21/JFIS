@@ -2,6 +2,7 @@
     font-family: Rubik;
     src:url(../font/RubikGlitch-Regular.ttf);
 }
+<<<<<<< HEAD
 h1{
     font-family: Rubik;
     color:white;
@@ -15,6 +16,8 @@ h2{
     text-align: center;
     font-size: small;
 }
+=======
+>>>>>>> L
 html{
     background-color: #222222;
 }
@@ -29,6 +32,7 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+<<<<<<< HEAD
     font-weight: bold;
 }
 #registration-form {
@@ -97,4 +101,6 @@ a{
 }
 a:hover {
     background-color: black;
+=======
+>>>>>>> L
 }

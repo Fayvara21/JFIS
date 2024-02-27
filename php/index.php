@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+>>>>>>> L
 <?php
 $servername = 'localhost';
 $username = 'root';
@@ -17,6 +28,7 @@ try{
 catch(PDOException $e){
     echo "Erreur : " . $e->getMessage();
 }
+<<<<<<< HEAD
 try {
 echo "<h1>(.)(.)</h1>";
 $sql = "SELECT * FROM users";
@@ -29,3 +41,8 @@ echo "Nouveau compte créer";
   $conn = null
 
 ?>
+=======
+?>
+</body>
+</html>
+>>>>>>> L
