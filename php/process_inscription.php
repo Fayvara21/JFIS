@@ -36,5 +36,5 @@ try {
      
 ?>
 <html>
-<meta http-equiv="refresh" content="0;URL=connexion_message.html">
+<meta http-equiv="refresh" content="0;URL=connexion_message.php">
 </html>
