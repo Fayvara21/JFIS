@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
-require_once './templates/head.php';
+require_once '../templates/head.php';
 ?>
 
     <div class="container">
@@ -86,6 +86,6 @@ require_once './templates/head.php';
     </div>
 <?php
 
-require_once './templates/footer.php';
+require_once '../templates/footer.php';
 
 ?>

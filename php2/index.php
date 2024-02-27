@@ -2,8 +2,8 @@
     require_once './check_login.php';
 ?>
 
-<?php require_once './templates/head.php' ?>
-<?php require_once './templates/navbar.php' ?>
+<?php require_once '../templates/head.php' ?>
+<?php require_once '../templates/navbar.php' ?>
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -41,6 +41,6 @@
         </div>
     </div>
 </div>
-<?php require_once './templates/footer.php' ?>
+<?php require_once '../templates/footer.php' ?>
 
 

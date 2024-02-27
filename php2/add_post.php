@@ -16,8 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-<?php require_once './templates/head.php' ?>
-<?php require_once './templates/navbar.php' ?>
+<?php require_once '../templates/head.php' ?>
+<?php require_once '../templates/navbar.php' ?>
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -36,4 +36,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </div>
-<?php require_once './templates/footer.php' ?>
+<?php require_once '../templates/footer.php' ?>

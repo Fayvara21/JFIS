@@ -6,14 +6,13 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "SELECT * FROM users WHERE username = :username AND password = :password";
+        $query = "SELECT * FROM users WHERE username = :username LIMIT 1";
         $statement = $pdo->prepare($query);
         $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
         $statement->execute();
         $user = $statement->fetch();
-        if ($user) {
+
+        if ($user && password_verify($password, $user['password'])) {
             session_start();
             $_SESSION['user'] = $user;
             header('Location: index.php');
