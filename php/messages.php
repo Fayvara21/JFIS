@@ -1,4 +1,6 @@
-
+<?php
+    require_once 'check_login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

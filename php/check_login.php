@@ -4,5 +4,5 @@ require_once './connect_db.php';
 if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
 } else {
-    header('Location: login.php');
+    header('Location: ../home.php');
 }

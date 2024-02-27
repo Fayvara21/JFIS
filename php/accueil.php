@@ -36,7 +36,7 @@
       <div>
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
-      <li><a class="waves-effect" href="../php2/logout.php">Déconnexion</a></li>
+      <li><a class="waves-effect" href="logout.php">Déconnexion</a></li>
 
       </div>
 
