@@ -21,10 +21,10 @@ $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 $pseudo = $_POST['pseudo'];
 $email = $_POST['email'];
-$mdp = $_POST['mot_de_passe'];
+$mdp = $_POST['password'];
 $anniv = $_POST['anniversaire'];
 $tel = $_POST['telephone'];
-  
+$mdp = password_hash($mdp, PASSWORD_DEFAULT);
 try {
     $sql = " INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `profile_picture`, `email`, `password`, `birthday`, `phone`, `active`) VALUES (NULL, '$prenom', '$nom', '$pseudo', '', '$email', '$mdp', '$anniv', '$tel', '1')";
     $pdo->exec($sql);

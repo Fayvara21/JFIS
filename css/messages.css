@@ -15,20 +15,10 @@ main {
     word-break: break-all;
     margin: 20px;
 }
-<<<<<<< HEAD:css/post.css
 
 .chatbox {
 
     padding: 5px;
-=======
-p{
-    margin: 1px;
-    font-size: medium;
-}
-.chatbox{
-    
-    padding:5px;
->>>>>>> 14c2d18d7fb52587c783d53e5511e33072e39b1d:css/messages.css
     border: solid;
     border-color: black;
     position: fixed;

@@ -69,7 +69,7 @@
         setInterval(update_chat, 3000);
 
       </script>
-      <?php include "update_post.php" ?>
+      <?php include "update_messages.php" ?>
     </p>
 
     <div class="chatbox superblack">
