@@ -1,5 +1,6 @@
 <?php
     require_once 'check_login.php';
+    $user['first_name'] = $prenom
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +52,7 @@
               $('#chat').empty();
               
               $.each(data, function(index, item){
-                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.first_name+' '+item.last_name+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
+                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.envoie.username+' '+item.last_name+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
                 
               });
               
