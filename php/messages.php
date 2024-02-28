@@ -15,6 +15,8 @@
 </head>
 <body>
 
+  <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
   <script src="../js/messages.js"></script>
@@ -27,15 +29,16 @@
 
         <li><a class="subheader">JFIS</a></li>
         <li><a class="devider"></a></li>
-        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
-        <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-        <li><a class="waves-effect" href="#!">Message privé</a></li>
+        <li><a class="waves-effect" href="#!">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
+        <li><a class="waves-effect" href="#!">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+        <li><a class="waves-effect" href="#!">Message privé <i class="fa-solid fa-message"></i></a></li>
       </div>
 
       <div>
 
-      <li><a class="waves-effect" href="#!">Informations du compte</a></li>
-      <li><a class="waves-effect" href="#!">Paramètres</a></li>
+      <li><a class="waves-effect" href="#!">Compte <i class="fa-solid fa-user"></i></a></li>
+      <li><a class="waves-effect" href="#!">Paramètres <i class="fa-solid fa-gear"></i></a></li>
+      <li><a class="waves-effect" href="../php2/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
       </div>
 
