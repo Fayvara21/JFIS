@@ -30,13 +30,13 @@
     echo "<p>username: " . $result['username'] . "</p><p>firstname: " 
     . $result['first_name'] . "</p><p>lastname: ". $result['last_name'] . "</p><p>birthday: "
     . $result['birthday'] . "</p><p>email: ". $result['email'] . "</p><p>phone: "
-    . $result['phone'] . "</p><p>profile picture: ". $result['profile_picture'] . '</p><p>';
+    . $result['phone'] . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p><p>';
 ?>
 
       <script type="text/javascript" src="../js/materialize.min.js"></script>
 
-    <form action="profil_min.php" method="post">
-      <input type="file" name="pfp" id="pfp" placeholder="photo de profil">
+    <form action="profil_min.php" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" id="image" placeholder="photo de profil">
       <input type="submit" id="submit" value="Mettre a jour">
 
     </form>
