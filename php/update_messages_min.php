@@ -11,7 +11,6 @@
     $sql = $conn->prepare("SELECT * FROM messages");
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
     header('Content-Type: application/json');
     echo json_encode($result);
 ?>
