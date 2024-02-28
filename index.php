@@ -19,7 +19,7 @@
           <input type="password" id="mot_de_passe" name="mot_de_passe" required>
 
           <button class="ombres_multiples_diffuses" type="submit">Se connecter</button>
-          <p>Vous n'avez pas de compte ?</p> <a class="ombres_multiples_diffuses" href="register.html" target="_blank" >Inscrivez-vous</a>
+          <p>Vous n'avez pas de compte ?</p> <a class="ombres_multiples_diffuses" href="register.php" target="_blank" >Inscrivez-vous</a>
           <p>C'est facile et rapide</p>
         </form>
     </div>
