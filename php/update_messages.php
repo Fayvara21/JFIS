@@ -16,9 +16,9 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $message = $_POST["text_input"];
+        $post_id = $_POST["post_id"];
         try {
-            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-25 10:16:38.000000', '2', '6'); ";
+            $sql = "INSERT INTO `like_posts` (`id`, `created_at`, `id_users`, `id_posts`) VALUES (NULL, '2024-02-26 14:21:29.000000', '6', 'post_id'); ";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':message', $message);
             $stmt->execute();
@@ -27,6 +27,8 @@
         catch (PDOException $e) { //echo"". $e->getMessage();
         }
     }
+
+    
 
     
 
