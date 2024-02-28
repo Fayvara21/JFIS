@@ -18,8 +18,11 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["text_input"];
         try {
-            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-25 10:16:38.000000', '2', '6'); ";
+            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-25 10:16:38.000000', :id_users, :id_users_recieve); ";
             $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':message', $message);
+            $stmt->bindParam(':id_users_recieve', $message);
+            $stmt->bindParam(':message', $message);
             $stmt->bindParam(':message', $message);
             $stmt->execute();
             header("Location:messages.php");
