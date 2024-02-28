@@ -1,6 +1,6 @@
-**messages.php:**
-
-
+<?php
+    require_once 'check_login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
+    <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
   <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
@@ -61,7 +62,7 @@
               $('#chat').empty();
               
               $.each(data, function(index, item){
-                $('#chat').append('<p>'+item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
+                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
                 
               });
               
@@ -102,6 +103,7 @@
 
             </script>
 
+            <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
             <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
             <p id="counter">255 </p>
             

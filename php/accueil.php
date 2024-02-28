@@ -1,3 +1,7 @@
+<?php
+    require_once 'check_login.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +9,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="../css/accueil.css">
+    <link rel="stylesheet" href="../css/accueil.css"> 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
 </head>
 <body>
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -41,5 +48,6 @@
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
     </nav>
+    <h1 style="color: White" >Bienvenue <?= $user['first_name'] . ' ' . $user['last_name'] ?></h1>
 </body>
 </html>
