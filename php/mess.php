@@ -51,7 +51,7 @@
               $('#chat').empty();
               
               $.each(data, function(index, item){
-                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.first_name+' '+item.last_name+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
+                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
                 
               });
               
