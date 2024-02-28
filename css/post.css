@@ -15,10 +15,7 @@ main {
     word-break: break-all;
     margin: 20px;
 }
-p{
-    margin: 1px;
-    font-size: medium;
-}
+
 .chatbox{
 
     padding:5px;
@@ -48,9 +45,9 @@ html,
     background-color: #222;
 }
 
-.sidenav li a,
+.sidenav li>a,
 p {
-    color: white; 
+    color: white;
 }
 
 .sidenav {
@@ -109,7 +106,8 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-li>div{
-    display: flex;
-    flex-direction: column;
+main{
+    margin-top: 365px;
+    padding-left: 160px;  
+    padding-right: 10px;
 }

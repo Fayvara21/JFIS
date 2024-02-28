@@ -2,8 +2,8 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="./css/a.css">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="../css/a.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
   </head>
@@ -25,7 +25,7 @@
             <input type="email" id="email" name="email" required>
   
             <label for="mot_de_passe">Mot de passe :</label>
-            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            <input type="password" id="password" name="password" required>
 
             <label for="anniversaire">Date d'anniversaire :</label>
             <input type="date" id="anniversaire" name="anniversaire" required>
@@ -35,7 +35,7 @@
 
             <button class="ombres_multiples_diffuses" type="submit">S'inscrire</button>
             <p>ou</p>
-            <a class="ombres_multiples_diffuses" href="index.html" target="_blank" >Vous avez déjâ un compte</a>
+            <a class="ombres_multiples_diffuses" href="home.php" target="_blank" >Vous avez déjâ un compte</a>
         </form>
     </div>
     <h2>BTL 2024</h2>
