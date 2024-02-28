@@ -8,19 +8,11 @@
 </head>
 
 <body>
-  <?php include "update_post.php" ?>
-  <form method="POST">
-    <textarea name="content" id="content" type="text" placeholder="Entrer du texte"></textarea>
-    <input id="submit" type="submit" value="Envoyer">
     <script src="../js/materialize.min.js"></script>
     <script src="../js/messages.js"></script>
-    <script>
-      function scroll_from_bottom() {
-        window.scrollTo(0, document.body.scrollHeight)
-      }
-      window.onload = scroll_from_bottom;
-      window.onkeyup = scroll_from_bottom;
-    </script>
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+
 
 
     <header>
@@ -49,28 +41,7 @@
 
     <main>
 
-      <p id="chat" class="chat">
-        <script>
-          function update_chat() {
-            $.ajax({
-              url: 'update_post_min.php',
-              method: 'GET',
-              dataType: 'json',
-              success: function(data) {
-                $('#chat').empty();
-                $('#chat').append('<p>');
-                $.each(data, function(index, item) {
-                  $('#chat').append(item.id_users + ' to ' + item.id_users_recieve + ' said: ' + item.content + '<br>');
 
-                });
-                $('#chat').append('</p>');
-              },
-              error: function(xhr, status, error) {
-                console.error('erreur: ', error);
-              }
-            });
-          }
-        </script>
       <main>
         <?php include "update_post.php" ?>
         <form method="POST">
@@ -82,7 +53,7 @@
 
               var form_data = new FormData(document.getElementById("content"));
               if (document.getElementById("content").value != "") {
-                fetch('update_post.php', {
+                fetch('update_post_min.php', {
                     method: 'POST',
                     body: form_data
                   }).then(response => response.text())
@@ -95,18 +66,6 @@
           </script>
 
         </form>
-
-  </form>
-
-  </div>
-  </div>
-
-  </form>
-
-
-
-
-
 </body>
 
 </html>
