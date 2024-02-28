@@ -21,12 +21,12 @@ $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 $pseudo = $_POST['pseudo'];
 $email = $_POST['email'];
-$mdp = $_POST['password'];
+$password = $_POST['password'];
 $anniv = $_POST['anniversaire'];
 $tel = $_POST['telephone'];
-$mdp = password_hash($mdp, PASSWORD_DEFAULT);
 try {
-    $sql = " INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `profile_picture`, `email`, `password`, `birthday`, `phone`, `active`) VALUES (NULL, '$prenom', '$nom', '$pseudo', '', '$email', '$mdp', '$anniv', '$tel', '1')";
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    $sql = " INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `profile_picture`, `email`, `password`, `birthday`, `phone`, `active`) VALUES (NULL, '$prenom', '$nom', '$pseudo', '', '$email', '$password', '$anniv', '$tel', '1')";
     $pdo->exec($sql);
     echo "Nouveau compte créer";
     } catch(PDOException $e) {
@@ -36,5 +36,5 @@ try {
      
 ?>
 <html>
-<meta http-equiv="refresh" content="0;URL=connexion_message.php">
+<meta http-equiv="refresh" content="0;URL=connexion_messages.php">
 </html>

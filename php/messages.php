@@ -25,13 +25,13 @@
     <ul id="slide-out" class="sidenav sidenav-fixed" >
       
       <li><a class="subheader">JFIS</a></li>
-      <li><a class="waves-effect" href="#!">Page d'acceuil</a></li>
-      <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-      <li><a class="waves-effect" href="#!">Envoyer un message privé</a></li>
+      <li><a class="waves-effect" href="./accueil.php">Page d'acceuil</a></li>
+      <li><a class="waves-effect" href="./post.php">Ecrire un poste</a></li>
+      <li><a class="waves-effect" href="./messages.php">Envoyer un message privé</a></li>
       <li><div class="divider"></div></li>
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
-
+      <li><a class="waves-effect" href="logout.php">Déconnexion</a></li>
     </ul>
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>

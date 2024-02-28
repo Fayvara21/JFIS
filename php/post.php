@@ -24,16 +24,16 @@
 
         <li><a class="subheader">JFIS</a></li>
         <li><a class="devider"></a></li>
-        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
+        <li><a class="waves-effect" href="./accueil.php">Page d'accueil</a></li>
         <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-        <li><a class="waves-effect" href="#!">Message privé</a></li>
+        <li><a class="waves-effect" href="./messages.php">Message privé</a></li>
       </div>
 
       <div>
 
       <li><a class="waves-effect" href="#!">Informations du compte</a></li>
       <li><a class="waves-effect" href="#!">Paramètres</a></li>
-
+      <li><a class="waves-effect" href="logout.php">Déconnexion</a></li>
       </div>
 
     </ul>

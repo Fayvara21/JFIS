@@ -25,7 +25,7 @@
             <input type="email" id="email" name="email" required>
   
             <label for="mot_de_passe">Mot de passe :</label>
-            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            <input type="password" id="password" name="password" required>
 
             <label for="anniversaire">Date d'anniversaire :</label>
             <input type="date" id="anniversaire" name="anniversaire" required>

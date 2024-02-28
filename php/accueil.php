@@ -29,8 +29,8 @@
         <li><a class="subheader">JFIS</a></li>
         <li><a class="devider"></a></li>
         <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
-        <li><a class="waves-effect" href="#!">Ecrire un poste</a></li>
-        <li><a class="waves-effect" href="#!">Message privé</a></li>
+        <li><a class="waves-effect" href="./post.php">Ecrire un poste</a></li>
+        <li><a class="waves-effect" href="./messages.php">Message privé</a></li>
       </div>
 
       <div>
