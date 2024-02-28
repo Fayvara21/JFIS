@@ -15,10 +15,6 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
