@@ -21,7 +21,7 @@
             $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-27 14:25:06.000000', '2', '4');  ";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':message', $message);
-
+            
             $stmt->execute();
             header("Location:messages.php");
         } 
@@ -30,9 +30,6 @@
     }
 
     
-
-    
-
     // try {
 
     //     $sql = $conn->prepare("SELECT * FROM messages");
@@ -48,17 +45,5 @@
     // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-   
       
 ?>

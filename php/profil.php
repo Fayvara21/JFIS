@@ -27,10 +27,13 @@
     $sql->execute();
     $result = $sql->fetch(PDO::FETCH_ASSOC);
     
-    echo "<p>username: " . $result['username'] . "</p><p>firstname: " 
-    . $result['first_name'] . "</p><p>lastname: ". $result['last_name'] . "</p><p>birthday: "
-    . $result['birthday'] . "</p><p>email: ". $result['email'] . "</p><p>phone: "
-    . $result['phone'] . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p><p>';
+    echo "<p>username: " . $result['username'] 
+    . "</p><p>firstname: " . $result['first_name'] 
+    . "</p><p>lastname: ". $result['last_name'] 
+    . "</p><p>birthday: ". $result['birthday'] 
+    . "</p><p>email: ". $result['email'] 
+    . "</p><p>phone: ". $result['phone'] 
+    . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p><p>';
 ?>
 
       <script type="text/javascript" src="../js/materialize.min.js"></script>
