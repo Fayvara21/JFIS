@@ -41,27 +41,26 @@
   </header>
 
   <main>
-  
 
-        
-  
-  <?php 
-  include "update_post_min.php";
 
-  foreach($result as $x){
-    echo "<p>content: " . $x["first_name"] . $x["content"];
-}
-   
-?>
-  
-  <main>
-    <div class="chat">
-      <?php include "update_post.php" ?>
-      <form method="POST">
-        <textarea name="content" id="content" type="text" placeholder="Entrer du texte"></textarea>
-        <input id="submit" type="submit" value="Envoyer">
-      
-</div>
+
+
+    <?php
+    include "update_post_min.php";
+
+    foreach ($result as $x) {
+      echo "<p>" . $x["username"] . "<br>" . $x["content"] . "<br>" . $x["created_at"];
+    }
+    ?>
+
+    <main>
+      <div class="chat">
+        <?php include "update_post.php" ?>
+        <form method="POST">
+          <textarea name="content" id="content" type="text" placeholder="Entrer du texte"></textarea>
+          <input id="submit" type="submit" value="Envoyer">
+
+      </div>
       </form>
     </main>
 </body>

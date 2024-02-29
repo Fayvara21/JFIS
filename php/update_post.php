@@ -25,7 +25,7 @@ try {
             $stmt->bindParam(':content', $content);
             $stmt->bindParam(':id_users', $_SESSION['user']['id']);
             $stmt->execute();
-            header("Location:post.php");
+            header("Location:accueil.php");
             echo 'yes';
         } 
         catch (PDOException $e) { echo"error". $e->getMessage();

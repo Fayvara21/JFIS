@@ -1,5 +1,7 @@
-main {
-    padding-left: 300px;
+main{
+    margin-top: 365px;
+    padding-left: 160px;
+    padding-right: 10px;
 }
 
 @font-face {
@@ -114,4 +116,7 @@ ul {
 li>div{
     display: flex;
     flex-direction: column;
+}
+.caca{
+    border: solid;
 }
