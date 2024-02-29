@@ -50,8 +50,8 @@
       foreach ($result as $x) {
         echo "<div class='caca'>";
         echo "Post de : " . $x["username"] .  "<br>" . $x["content"] . "<br>";
-        echo "<button>like</button>";
-        echo "<button>commentaire</button>";
+        echo "<button><i class='fa-solid fa-heart'></i></button>";
+        echo "<button><i class='fa-regular fa-comment'></i></button>";
 
         echo "</div>";
       }
