@@ -1,6 +1,6 @@
 <?php
-    require_once 'check_login.php';
-    $user['first_name'] = $prenom
+    //require_once 'check_login.php';
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,13 +49,11 @@
             method: 'GET',
             dataType: 'json',
             success: function(data) {
+              console.log(data);
               $('#chat').empty();
-              
-              $.each(data, function(index, item){
-                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.envoie.username+' '+item.last_name+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
-                
+              $.each(data, function(index, message){
+                $('#chat').append('<p>At '+message.created_at +", "+ message.sender_username + ' to ' + message.recipient_username + ' said: ' + message.content + '</p>');
               });
-              
             },
             error:function(xhr, status, error){
               console.error('erreur: ', error);
@@ -64,7 +62,6 @@
         }
         update_chat();
         setInterval(update_chat, 3000);
-
       </script>
       <?php include "update_messages.php" ?>
       </div>
