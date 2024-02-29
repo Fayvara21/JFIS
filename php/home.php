@@ -17,7 +17,8 @@
             $_SESSION['user'] = $user;
             header('Location: accueil.php');
         } else {
-            $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+           // $error = 'Nom d\'utilisateur ou mot de passe incorrect';
+            $error = $username."<br>".$password."<br>".$user['password']."<br>".$user['username'];
         }
 
     }
@@ -48,7 +49,7 @@
 
           <button class="ombres_multiples_diffuses" type="submit">Se connecter</button>
           <p>Vous n'avez pas de compte ?</p> <a class="ombres_multiples_diffuses" href="register.php" target="_blank" >Inscrivez-vous</a>
-          <p>C'est facile et rapidze</p>
+          <p>C'est facile et rapide</p>
         </form>
     </div>
     <h2>BTL 2024</h2>

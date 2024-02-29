@@ -1,5 +1,5 @@
 <?php
-    //require_once 'check_login.php';
+    require_once 'check_login.php';
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +23,7 @@
   <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeyup=scroll_from_bottom; </script>
 
 
-<?php
-    //require_once 'check_login.php';
-?>
+
 
 <ul id="slide-out" class="sidenav sidenav-fixed" >
       <div>

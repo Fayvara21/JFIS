@@ -1,5 +1,5 @@
 <?php
-    //require_once 'check_login.php';
+    require_once 'check_login.php';
     
 ?>
 <!DOCTYPE html>
@@ -90,7 +90,6 @@
 
             </script>
 
-            <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
             <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
             <p id="counter">255 </p>
             
