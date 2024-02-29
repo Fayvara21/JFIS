@@ -87,6 +87,7 @@ li>.subheader {
 }
 main{
     padding-left: 300px;
+    margin-top:64px;
 }
 @media only screen and (max-width : 992px) {
     main {

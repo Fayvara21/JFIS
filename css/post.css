@@ -86,9 +86,15 @@ li>.subheader {
     margin-right: 10px;
 }
 
+
+
+main{
+    padding-left: 300px;
+    margin-top: 64px;
+}
 @media only screen and (max-width : 992px) {
     main {
-        padding-left: 0;
+        padding-left: 0px;
     }
 
     .chatbox {
@@ -106,8 +112,4 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-main{
-    margin-top: 365px;
-    padding-left: 160px;  
-    padding-right: 10px;
-}
+

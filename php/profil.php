@@ -23,6 +23,10 @@
   <script> function scroll_from_bottom() { window.scrollTo(0, document.body.scrollHeight) } window.onload=scroll_from_bottom; window.onkeyup=scroll_from_bottom; </script>
 
 
+<?php
+    //require_once 'check_login.php';
+?>
+
 <ul id="slide-out" class="sidenav sidenav-fixed" >
       <div>
 
@@ -44,7 +48,33 @@
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
     </nav>
-    <h1 style="color: White" >Bienvenue <?= $user['first_name'] . ' ' . $user['last_name'] ?></h1>
+
+    <main>
+
+    <?php 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "jefis";  
+    $port = 3306;
+
+
+    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = $conn->prepare("SELECT username, first_name, last_name, birthday, email, phone, profile_picture FROM users WHERE id = :id");
+    $sql->bindValue(':id', 3);
+    $sql->execute();
+    $result = $sql->fetch(PDO::FETCH_ASSOC);
+
+    echo "<p>username: " . $result['username'] 
+    . "</p><p>firstname: " . $result['first_name'] 
+    . "</p><p>lastname: ". $result['last_name'] 
+    . "</p><p>birthday: ". $result['birthday'] 
+    . "</p><p>email: ". $result['email'] 
+    . "</p><p>phone: ". $result['phone'] 
+    . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p><p>';
+
+?>
     <script type="text/javascript" src="../js/materialize.min.js"></script>
 
 <form action="profil_min.php" method="post" enctype="multipart/form-data">
@@ -52,6 +82,6 @@
   <input type="submit" id="submit" value="Mettre a jour">
 
 </form>
-
+</main>
 </body>
 </html>
