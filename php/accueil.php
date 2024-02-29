@@ -44,6 +44,5 @@
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
     </nav>
-    <h1 style="color: White" >Bienvenue <?= $user['first_name'] . ' ' . $user['last_name'] ?></h1>
 </body>
 </html>
