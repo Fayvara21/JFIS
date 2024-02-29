@@ -51,6 +51,7 @@
         echo "<div class='caca'>";
         echo "Post de : " . $x["username"] .  "<br>" . $x["content"] . "<br>";
         echo "<button>like</button>";
+        echo "<button>commentaire</button>";
 
         echo "</div>";
       }
