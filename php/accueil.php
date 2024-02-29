@@ -44,7 +44,20 @@
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
     </nav>
-    <h1 style="color: White" >Bienvenue <?= $user['first_name'] . '' . $user['last_name'] ?></h1>
+    <main>
+      <?php include "update_post_min.php"; 
+     foreach($result as $x){
+        echo "<p>JFI : " . $x["content"] .  " postée de : " . $x["first_name"] . "</p>";
+       
+    }
+      
+      
+      ?>
+        <?php include "update_post.php" ?>
+      <form method="POST">
+        <textarea name="content" id="content" type="text" placeholder="Entrer du texte"></textarea>
+        <input id="submit" type="submit" value="Envoyer">
+    </main>
 
 </body>
 </html>
