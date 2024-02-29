@@ -43,5 +43,21 @@
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
     </nav>
-</body>
+
+    <main>
+    <div class="chat">
+      <?php include "update_post_min.php";
+      foreach ($result as $x) {
+        echo "<div class='caca'>";
+        echo "Post de : " . $x["username"] .  "<br>" . $x["content"] . "<br>";
+        echo "<button>like</button>";
+
+        echo "</div>";
+      }
+
+      ?>
+    </div>>
+
+  </main>
+  </body>
 </html>
