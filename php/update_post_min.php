@@ -11,7 +11,7 @@
     $sql = $conn->prepare("SELECT * FROM `posts` JOIN users WHERE posts.id_users = users.id;");
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
+   
    
    
 
