@@ -15,13 +15,15 @@ main {
     word-break: break-all;
     margin: 20px;
 }
-p{
+
+p {
     margin: 1px;
     font-size: medium;
 }
-.chatbox{
 
-    padding:5px;
+.chatbox {
+
+    padding: 5px;
     border: solid;
     border-color: black;
     position: fixed;
@@ -50,14 +52,14 @@ html,
 
 .sidenav li a,
 p {
-    color: white; 
+    color: white;
 }
 
 .sidenav {
     border: solid;
     border-color: white;
     box-shadow: inset 0 0 1em black,
-        0 0 2em grey; 
+        0 0 2em grey;
     border-bottom-width: 63px;
     padding-bottom: 0px;
 }
@@ -109,15 +111,21 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-li>div{
+
+li>div {
     display: flex;
     flex-direction: column;
 }
-.caca{
-    border: solid;
-    border-radius: 20px; 
-  border: 10px solid #333; 
-  padding: 5px;
-  box-shadow: inset 0 0 1em black,
+
+.caca {
+  
+    border-radius: 20px;
+    border: 10px solid #333;
+    padding: 5px;
+    box-shadow: inset 0 0 1em black,
         0 0 2em grey;
+}
+
+.liked {
+    background-color: green;
 }

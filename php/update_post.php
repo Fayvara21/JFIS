@@ -1,10 +1,6 @@
 <?php 
 require_once './check_login.php';
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "jefis";  
-$port = 3306;
+
 
 try {
     $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
@@ -18,12 +14,14 @@ try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $content = $_POST["content"];
         try {
-            $sql = "INSERT INTO `posts` (`id`, `content`, `created_at`, `id_users`) VALUES (NULL, :content, '2024-02-26 10:57:43.000000', '7'); ";
+        //    var_dump($_SESSION);
+            $sql = "INSERT INTO `posts` (`id`, `content`, `id_users`) VALUES (NULL, :content, :id_users)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':content', $content);
+            $stmt->bindParam(':id_users', $_SESSION['user']['id']);
             $stmt->execute();
-            header("Location:post.php");
-  
+            header("Location:accueil.php");
+            
         } 
         catch (PDOException $e) { echo"error". $e->getMessage();
         }
@@ -31,8 +29,6 @@ try {
     // else{
     //    echo"no";
     // }
-
-    
 
 
 
