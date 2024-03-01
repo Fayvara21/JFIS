@@ -27,18 +27,18 @@
 
 <ul id="slide-out" class="sidenav sidenav-fixed" >
       <div>
-
+      <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
         <li><a class="subheader">JFIS</a></li>
         <li><a class="devider"></a></li>
-        <li><a class="waves-effect" href="#!">Page d'accueil</a></li>
-        <li><a class="waves-effect" href="./post.php">Ecrire un poste</a></li>
-        <li><a class="waves-effect" href="./messages.php">Message privé</a></li>
+        <li><a class="waves-effect" href="./accueil.php">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
+        <li><a class="waves-effect" href="./post.php">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+        <li><a class="waves-effect" href="./messages_select">Peoples <i class="fa-solid fa-person"></i></a></li>
+        <li><a class="waves-effect" href="./messages.php">Message privé <i class="fa-solid fa-message"></i></a></li>
       </div>
 
       <div>
-      <li><a class="waves-effect" href="#!">Informations du compte</a></li>
-      <li><a class="waves-effect" href="#!">Paramètres</a></li>
-      <li><a class="waves-effect" href="logout.php">Déconnexion</a></li>
+      <li><a class="waves-effect" href="#!">Profil <i class="fa-solid fa-user"></i></a></li>
+      <li><a class="waves-effect" href="../php/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
       </div>
 
@@ -64,14 +64,13 @@
     $sql->execute();
     $result = $sql->fetch(PDO::FETCH_ASSOC);
 
-    echo "<p>username: " . $result['username'] 
+    echo "<div id='zizi'><p>username: " . $result['username'] 
     . "</p><p>firstname: " . $result['first_name'] 
     . "</p><p>lastname: ". $result['last_name'] 
     . "</p><p>birthday: ". $result['birthday'] 
     . "</p><p>email: ". $result['email'] 
     . "</p><p>phone: ". $result['phone'] 
-    . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p><p>';
-
+    . "</p><p>profile picture: ". '<img src="data:image/jpeg;base64,'.$result['profile_picture'].'">' . '</p></div>';
 ?>
     <script type="text/javascript" src="../js/materialize.min.js"></script>
 

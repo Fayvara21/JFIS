@@ -3,7 +3,7 @@ require_once './check_login.php';
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "jefis";  
+    $database = "JFIS";  
     $port = 3306;
 
     try {
@@ -17,7 +17,7 @@ require_once './check_login.php';
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $message = $_POST["text_input"];
+        $post_id = $_POST["post_id"];
         try {
             $id_users = $_SESSION['user']['id'];
             $id_users_recieve = $_SESSION['user_recieve'];

@@ -17,6 +17,8 @@
 <body>
     <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
+  <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
   <script src="../js/messages.js"></script>
@@ -24,16 +26,24 @@
 
   
   <header>
-    <ul id="slide-out" class="sidenav sidenav-fixed" >
-      
-      <li><a class="subheader">JFIS</a></li>
-      <li><a class="waves-effect" href="#!">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
-        <li><a class="waves-effect" href="#!">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+  <ul id="slide-out" class="sidenav sidenav-fixed" >
+      <div>
+
+        <li><a class="subheader">JFIS</a></li>
+        <li><a class="devider"></a></li>
+        <li><a class="waves-effect" href="./accueil.php">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
+        <li><a class="waves-effect" href="./post.php">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+        <li><a class="waves-effect" href="./messages_select.php">Peoples <i class="fa-solid fa-person"></i></a></li>
         <li><a class="waves-effect" href="#!">Message privé <i class="fa-solid fa-message"></i></a></li>
-      <li><div class="divider"></div></li>
-      <li><a class="waves-effect" href="#!">Compte <i class="fa-solid fa-user"></i></a></li>
-      <li><a class="waves-effect" href="#!">Paramètres <i class="fa-solid fa-gear"></i></a></li>
+      </div>
+
+      <div>
+
+      <li><a class="waves-effect" href="./profil.php">Profil <i class="fa-solid fa-user"></i></a></li>
       <li><a class="waves-effect" href="../php2/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
+
+      </div>
+
     </ul>
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>

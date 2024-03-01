@@ -107,3 +107,11 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+#zizi>p{
+    border: solid;
+    border-radius: 30px; 
+  border: 5px solid #333; 
+  padding: 10px;
+}

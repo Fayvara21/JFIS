@@ -3,7 +3,7 @@ require_once './check_login.php';
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "jefis";  
+    $database = "JFIS";  
     $port = 3306;
 
  

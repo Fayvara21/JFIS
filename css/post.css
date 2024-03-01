@@ -15,7 +15,10 @@ main {
     word-break: break-all;
     margin: 20px;
 }
-
+p{
+    margin: 1px;
+    font-size: medium;
+}
 .chatbox{
 
     padding:5px;
@@ -86,9 +89,15 @@ li>.subheader {
     margin-right: 10px;
 }
 
+
+
+main{
+    padding-left: 300px;
+    margin-top: 64px;
+}
 @media only screen and (max-width : 992px) {
     main {
-        padding-left: 0;
+        padding-left: 0px;
     }
 
     .chatbox {
