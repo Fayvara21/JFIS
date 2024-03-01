@@ -34,7 +34,7 @@
       </div>
 
       <div>
-      <li><a class="waves-effect" href="#!">Compte <i class="fa-solid fa-user"></i></a></li>
+      <li><a class="waves-effect" href="./profil.php">Profil <i class="fa-solid fa-user"></i></a></li>
       <li><a class="waves-effect" href="../php2/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
       </div>
