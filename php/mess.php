@@ -1,6 +1,5 @@
 <?php
     require_once 'check_login.php';
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +14,6 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
@@ -27,13 +25,13 @@
     <ul id="slide-out" class="sidenav sidenav-fixed" >
       
       <li><a class="subheader">JFIS</a></li>
-      <li><a class="waves-effect" href="#!">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
-        <li><a class="waves-effect" href="#!">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
-        <li><a class="waves-effect" href="#!">Message privé <i class="fa-solid fa-message"></i></a></li>
+      <li><a class="waves-effect" href="./accueil.php">Page d'acceuil</a></li>
+      <li><a class="waves-effect" href="./post.php">Ecrire un poste</a></li>
+      <li><a class="waves-effect" href="./messages.php">Envoyer un message privé</a></li>
       <li><div class="divider"></div></li>
-      <li><a class="waves-effect" href="#!">Compte <i class="fa-solid fa-user"></i></a></li>
-      <li><a class="waves-effect" href="#!">Paramètres <i class="fa-solid fa-gear"></i></a></li>
-      <li><a class="waves-effect" href="../php2/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <li><a class="waves-effect" href="#!">Informations du compte</a></li>
+      <li><a class="waves-effect" href="#!">Paramètres</a></li>
+      <li><a class="waves-effect" href="logout.php">Déconnexion</a></li>
     </ul>
     <nav>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons" style="font-size: 48px; color:white;">menu</i></a>
@@ -50,11 +48,13 @@
             method: 'GET',
             dataType: 'json',
             success: function(data) {
-              console.log(data);
               $('#chat').empty();
-              $.each(data, function(index, message){
-                $('#chat').append('<p>A '+message.created_at +", "+ message.sender_username + ' dit à ' + message.recipient_username + ' : ' + message.content + '</p>');
+              
+              $.each(data, function(index, item){
+                $('#chat').append('<p><img src="data:image/jpeg;base64,'+item.profile_picture+'">'+item.id_users+' to '+item.id_users_recieve+' said: '+item.content+'</p><br>');
+                
               });
+              
             },
             error:function(xhr, status, error){
               console.error('erreur: ', error);
@@ -63,6 +63,7 @@
         }
         update_chat();
         setInterval(update_chat, 3000);
+
       </script>
       <?php include "update_messages.php" ?>
       </div>
@@ -91,6 +92,7 @@
 
             </script>
 
+            <a class="btn-floating sidenav-trigger grey" id="button"><i class="material-icons">add</i></a>
             <input id="message" class="message" type="text" name="text_input" placeholder="Envoyer un message" oninput="count_letters()">
             <p id="counter">255 </p>
             

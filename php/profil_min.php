@@ -1,5 +1,5 @@
 <?php 
-
+require_once 'check_login.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -25,12 +25,12 @@ if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
     
     
     $statement = $conn->prepare("UPDATE `users` SET `profile_picture` = :pfp WHERE `id` = :id");
-    $statement->bindValue(':id', 3);
+    $statement->bindValue(':id', $_SESSION['user']['id']);
     $statement->bindValue(':pfp', $imageData);
     
     $statement->execute();
     echo "Image uploaded and inserted into database successfully.";
-    header('Location: profil.php'); // Redirect after successful upload
+    //header('Location: profil.php'); 
 }
 catch (PDOException $e) {  
     echo 'error uploading image'. $e->getMessage();

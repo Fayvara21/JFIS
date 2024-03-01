@@ -1,4 +1,5 @@
 <?php 
+require_once './check_login.php';
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -18,10 +19,15 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST["text_input"];
         try {
-            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', '2024-02-27 14:25:06.000000', '2', '4');  ";
+            $id_users = $_SESSION['user']['id'];
+            $id_users_recieve = $_SESSION['user_recieve'];
+            $currentDateTime = date('Y-m-d H:i:s');
+            $sql = "INSERT INTO `messages` (`id`, `content`, `is_read`, `created_at`, `id_users`, `id_users_recieve`) VALUES (NULL, :message, '0', :created_at, :id_users, :id_users_recieve)";            
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':message', $message);
-            
+            $stmt->bindParam(':created_at', $currentDateTime); 
+            $stmt->bindParam(":id_users", $id_users, PDO::PARAM_INT);
+            $stmt->bindParam(":id_users_recieve", $id_users_recieve, PDO::PARAM_INT);
             $stmt->execute();
             header("Location:messages.php");
         } 

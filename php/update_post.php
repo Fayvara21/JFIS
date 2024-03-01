@@ -1,5 +1,5 @@
 <?php 
-
+require_once './check_login.php';
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -23,7 +23,7 @@ try {
             $stmt->bindParam(':content', $content);
             $stmt->execute();
             header("Location:post.php");
-            echo 'yes';
+  
         } 
         catch (PDOException $e) { echo"error". $e->getMessage();
         }
