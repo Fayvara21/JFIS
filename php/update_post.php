@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "JFIS";  
+$database = "jefis";  
 $port = 3306;
 
 try {
