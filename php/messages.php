@@ -52,7 +52,7 @@
               console.log(data);
               $('#chat').empty();
               $.each(data, function(index, message){
-                $('#chat').append('<p>à '+message.created_at +", "+ message.sender_username + ' dit à ' + message.recipient_username + ' : ' + message.content + '</p>');
+                $('#chat').append('<p>A '+message.created_at +", "+ message.sender_username + ' dit à ' + message.recipient_username + ' : ' + message.content + '</p>');
               });
             },
             error:function(xhr, status, error){
