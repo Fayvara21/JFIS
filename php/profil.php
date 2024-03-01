@@ -38,7 +38,7 @@
 
       <div>
       <li><a class="waves-effect" href="#!">Profil <i class="fa-solid fa-user"></i></a></li>
-      <li><a class="waves-effect" href="../php/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
+      <li><a class="waves-effect" href="logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
       </div>
 
