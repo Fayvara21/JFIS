@@ -20,7 +20,7 @@ p{
     font-size: medium;
 }
 .chatbox{
-    
+
     padding:5px;
     border: solid;
     border-color: black;
@@ -88,10 +88,13 @@ li>.subheader {
     flex: none;
     margin-right: 10px;
 }
-
+main {
+    padding-left: 300px;
+    padding-top: 64px;
+}
 @media only screen and (max-width : 992px) {
     main {
-        padding-left: 0;
+        padding-left: 0px;
     }
 
     .chatbox {
@@ -109,7 +112,11 @@ ul {
     flex-direction: column;
     justify-content: space-between;
 }
-main{
-    margin-top: 365px;
-    padding-left: 310px;
+
+
+#zizi>p{
+    border: solid;
+    border-radius: 30px; 
+  border: 5px solid #333; 
+  padding: 10px;
 }
