@@ -32,7 +32,7 @@
 
             <div class="input-field col s6">
               <i class="material-icons prefix">phone</i>
-              <input type="text" name="inputData" maxlength="10">
+              <input type="text" name="telephone" maxlength="10">
               <label for="icon_telephone"></label>
               
             </div>
