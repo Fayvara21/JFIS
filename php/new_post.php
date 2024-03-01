@@ -43,7 +43,7 @@
 
 
       <main>
-        <?php include "update_post.php" ?>
+        <?php require_once 'check_login.php';include "update_post.php" ;?>
         <form method="POST">
           <textarea name="content" id="content" type="text" placeholder="Entrer du texte"></textarea>
           <input id="submit" type="submit" value="Envoyer">
