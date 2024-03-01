@@ -56,7 +56,7 @@ require_once 'check_login.php';
     <div class="chat">
       <?php include "update_post_min.php";
       foreach ($result as $x) {
-        var_dump($x);
+       // var_dump($x);
         echo "<div class='caca'>";
         echo "Post de : " . $x["username"] .  "<br>" . $x["content"] . "<br>" . $x["created_at"] . "<br>";
         echo "<button>like</button>";

@@ -1,8 +1,4 @@
-main{
-    margin-top: 365px;
-    padding-left: 160px;
-    padding-right: 10px;
-}
+
 
 @font-face {
     font-family: Rubik;
@@ -90,11 +86,11 @@ li>.subheader {
     flex: none;
     margin-right: 10px;
 }
-body{
+main{
     padding-left:300px;
 }
 @media only screen and (max-width : 992px) {
-    main, body {
+    main {
         padding-left: 0px;
     }
 
