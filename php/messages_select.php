@@ -43,7 +43,7 @@
 
 
 
-<h1>Communiquer avec un utilisateur</h1>
+<p>Communiquer avec un utilisateur</p>
   <form action="messages_select_min.php" method="post">
     <select name="user" style="display:flex;">
     <?php

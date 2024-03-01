@@ -60,7 +60,7 @@
     $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = $conn->prepare("SELECT username, first_name, last_name, birthday, email, phone, profile_picture FROM users WHERE id = :id");
-    $sql->bindValue(':id', 3);
+    $sql->bindValue(':id', $_SESSION['user']['id']);
     $sql->execute();
     $result = $sql->fetch(PDO::FETCH_ASSOC);
 
