@@ -15,6 +15,7 @@
         if ($user && password_verify($password, $user['password'])) {
             session_start();
             $_SESSION['user'] = $user;
+
             header('Location: accueil.php');
         } else {
             $error = 'Nom d\'utilisateur ou mot de passe incorrect';

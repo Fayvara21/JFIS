@@ -41,8 +41,41 @@
 
   <main>
 
-x
-    
+
+
+<h1>Communiquer avec un utilisateur</h1>
+  <form action="messages_select_min.php" method="post">
+    <select name="user" style="display:flex;">
+    <?php
+
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $database = "jefis";  
+      $port = 3306;
+
+      try {
+        $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = "SELECT * FROM users";
+        $statement = $conn->query($sql);
+
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+          echo "<option value='".$row["id"]."'>".htmlspecialchars($row["username"])."</option>";
+        }
+} catch (PDOException $e) { 
+    echo "connection échouée ". $e->getMessage();
+}
+
+
+  ?>
+    </select> 
+    <input type="submit" value="envoyer">
+  </form>
+
+
 
   </main>
 
