@@ -30,7 +30,9 @@
         <li><a class="devider"></a></li>
         <li><a class="waves-effect" href="#!">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
         <li><a class="waves-effect" href="./post.php">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+        <li><a class="waves-effect" href="./messages_select.php">Peoples <i class="fa-solid fa-person"></i></a></li>
         <li><a class="waves-effect" href="./messages.php">Message privé <i class="fa-solid fa-message"></i></a></li>
+        
       </div>
 
       <div>
