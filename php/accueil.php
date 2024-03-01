@@ -74,7 +74,7 @@ require_once 'check_login.php';
         <form action="new_comment.php" method="POST" name="commenta"> 
            <button ><i class='fa-regular fa-comment'></i></button>
       </form>
-      $_SESSION['id_post'] = $x['id']
+
         </div>
         <?php
       }
