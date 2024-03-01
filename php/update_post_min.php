@@ -1,14 +1,6 @@
 <?php 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "jefis";  
-    $port = 3306;
-
- 
-    $conn = new PDO("mysql:host=$servername;port=$port;dbname=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = $conn->prepare("SELECT * FROM `posts` JOIN users WHERE posts.id_users = users.id;");
+  require_once './check_login.php';
+    $sql = $pdo->prepare("SELECT `posts`.*, `users`.username FROM `posts` JOIN users WHERE posts.id_users = users.id ORDER BY posts.created_at DESC;");
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
    

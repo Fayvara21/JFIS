@@ -18,17 +18,10 @@ require_once 'check_login.php';
 
 <body>
 
-
+  <script src="https://kit.fontawesome.com/bb627f976a.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../js/materialize.min.js"></script>
   <script src="../js/messages.js"></script>
-  <script>
-    function scroll_from_bottom() {
-      window.scrollTo(0, document.body.scrollHeight)
-    }
-    window.onload = scroll_from_bottom;
-    window.onkeyup = scroll_from_bottom;
-  </script>
 
 
   <ul id="slide-out" class="sidenav sidenav-fixed">
@@ -55,17 +48,38 @@ require_once 'check_login.php';
   <main>
     <div class="chat">
       <?php include "update_post_min.php";
-      foreach ($result as $x) {
-       // var_dump($x);
-        echo "<div class='caca'>";
-        echo "Post de : " . $x["username"] .  "<br>" . $x["content"] . "<br>" . $x["created_at"] . "<br>";
-        echo "<button>like</button>";
-        echo "</div>";
+      foreach ($result as $x) { 
+        $likedPost = $pdo->prepare('SELECT * FROM `like_posts` WHERE id_users = :id_users AND id_posts = :id_posts');
+        $likedPost->bindValue(':id_posts', $x["id"]);
+        $likedPost->bindValue(':id_users', $user['id']);
+        $likedPost->execute();
+        $isLike = $likedPost->fetch();
+        if (!$isLike) {
+          $isLike = false;
+        }else{
+          $isLike = true;
+        }
+        ?>
+        <div class='caca'>
+        Post de : <?=  $x["username"] ?><br><?= $x["content"] ?><br><?= $x["created_at"] ?><br>
+        <form method="POST" class='like' action="update_like.php">
+          <input name="formId" type="hidden" value="<?= $x["id"] ?>">
+          <button type="submit" <?php 
+          if ($isLike) {
+            echo 'class="liked"';
+          }
+          
+          ?>><i class='fa-solid fa-heart'></i></button>
+        </form>
+        <form action="new_comment.php" method="POST" name="commenta"> 
+           <button ><i class='fa-regular fa-comment'></i></button>
+      </form>
+      $_SESSION['id_post'] = $x['id']
+        </div>
+        <?php
       }
-
       ?>
     </div>
-    
 
   </main>
 

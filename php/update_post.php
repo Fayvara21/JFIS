@@ -19,14 +19,14 @@ try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $content = $_POST["content"];
         try {
-            var_dump($_SESSION);
+        //    var_dump($_SESSION);
             $sql = "INSERT INTO `posts` (`id`, `content`, `id_users`) VALUES (NULL, :content, :id_users)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':content', $content);
             $stmt->bindParam(':id_users', $_SESSION['user']['id']);
             $stmt->execute();
             header("Location:accueil.php");
-            echo 'yes';
+            
         } 
         catch (PDOException $e) { echo"error". $e->getMessage();
         }
