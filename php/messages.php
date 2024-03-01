@@ -32,12 +32,13 @@
         <li><a class="devider"></a></li>
         <li><a class="waves-effect" href="./accueil.php">Page d'accueil <i class="fa-solid fa-house"></i></a></li> 
         <li><a class="waves-effect" href="./post.php">Ecrire un poste <i class="fa-solid fa-pen"></i></a></li>
+        <li><a class="waves-effect" href="./messages_select.php">Peoples <i class="fa-solid fa-person"></i></a></li>
         <li><a class="waves-effect" href="#!">Message privé <i class="fa-solid fa-message"></i></a></li>
       </div>
 
       <div>
 
-      <li><a class="waves-effect" href="#!">Compte <i class="fa-solid fa-user"></i></a></li>
+      <li><a class="waves-effect" href="./profil.php">Profil <i class="fa-solid fa-user"></i></a></li>
       <li><a class="waves-effect" href="../php2/logout.php">Déconnexion <i class="fa-solid fa-right-to-bracket"></i></a></li>
 
       </div>
